@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convertidos de grados"
+        android:textSize="25dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/line1"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1"
+        />
+
+    <EditText
+        android:id="@+id/gradCelcius1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Celcius"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line1"
+        app:layout_constraintBottom_toTopOf="@id/line2"
+        app:layout_constraintEnd_toStartOf="@id/celToFahr"
+        />
+
+    <TextView
+        android:id="@+id/celToFahr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="a"
+        android:textSize="28dp"
+        app:layout_constraintStart_toEndOf="@id/gradCelcius1"
+        app:layout_constraintTop_toBottomOf="@id/line1"
+        app:layout_constraintEnd_toStartOf="@id/celFahr"
+        app:layout_constraintBottom_toBottomOf="@id/line2"
+        />
+
+    <TextView
+        android:id="@+id/celFahr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fahrenheit"
+        app:layout_constraintStart_toEndOf="@id/celToFahr"
+        app:layout_constraintTop_toBottomOf="@id/line1"
+        app:layout_constraintEnd_toStartOf="@id/resultCelToFahr"
+        app:layout_constraintBottom_toTopOf="@id/line2"
+        />
+
+    <TextView
+        android:id="@+id/resultCelToFahr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="="
+        android:textSize="28dp"
+        android:background="@color/black"
+        android:textColor="@color/white"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/line1"
+        app:layout_constraintStart_toEndOf="@id/celFahr"
+        app:layout_constraintEnd_toStartOf="@id/valueCelToFahr"
+        app:layout_constraintBottom_toTopOf="@id/line2"
+        />
+
+    <TextView
+        android:id="@+id/valueCelToFahr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/resultCelToFahr"
+        app:layout_constraintTop_toBottomOf="@id/line1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/line2"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2"
+        />
+
+    <EditText
+        android:id="@+id/gradCelcius2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Celcius"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line2"
+        app:layout_constraintBottom_toTopOf="@id/line3"
+        app:layout_constraintEnd_toStartOf="@id/celToKelv"
+        />
+
+    <TextView
+        android:id="@+id/celToKelv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="a"
+        android:textSize="28dp"
+        app:layout_constraintStart_toEndOf="@id/gradCelcius1"
+        app:layout_constraintTop_toBottomOf="@id/line2"
+        app:layout_constraintEnd_toStartOf="@id/celKelv"
+        app:layout_constraintBottom_toBottomOf="@id/line3"
+        />
+
+    <TextView
+        android:id="@+id/celKelv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kelvin"
+        app:layout_constraintStart_toEndOf="@id/celToFahr"
+        app:layout_constraintTop_toBottomOf="@id/line2"
+        app:layout_constraintEnd_toStartOf="@id/resultCelToKelv"
+        app:layout_constraintBottom_toTopOf="@id/line3"
+        />
+
+    <TextView
+        android:id="@+id/resultCelToKelv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="="
+        android:textSize="28dp"
+        android:background="@color/black"
+        android:textColor="@color/white"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/line2"
+        app:layout_constraintStart_toEndOf="@id/celKelv"
+        app:layout_constraintEnd_toStartOf="@id/valueCelToKelv"
+        app:layout_constraintBottom_toTopOf="@id/line3"
+        />
+
+    <TextView
+        android:id="@+id/valueCelToKelv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/resultCelToKelv"
+        app:layout_constraintTop_toBottomOf="@id/line2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/line3"
+        />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3"
+        />
+
+    <EditText
+        android:id="@+id/gradFahrenheit1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Fahrenheit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line3"
+        app:layout_constraintBottom_toTopOf="@id/line4"
+        app:layout_constraintEnd_toStartOf="@id/FahrToCel"
+        />
+
+    <TextView
+        android:id="@+id/FahrToCel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="a"
+        android:textSize="28dp"
+        app:layout_constraintStart_toEndOf="@id/gradFahrenheit1"
+        app:layout_constraintTop_toBottomOf="@id/line3"
+        app:layout_constraintEnd_toStartOf="@id/FahrCel"
+        app:layout_constraintBottom_toBottomOf="@id/line4"
+        />
+
+    <TextView
+        android:id="@+id/FahrCel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Celcius"
+        app:layout_constraintStart_toEndOf="@id/FahrToCel"
+        app:layout_constraintTop_toBottomOf="@id/line3"
+        app:layout_constraintEnd_toStartOf="@id/resultFahrToCel"
+        app:layout_constraintBottom_toTopOf="@id/line4"
+        />
+
+    <TextView
+        android:id="@+id/resultFahrToCel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="="
+        android:textSize="28dp"
+        android:background="@color/black"
+        android:textColor="@color/white"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/line3"
+        app:layout_constraintStart_toEndOf="@id/FahrCel"
+        app:layout_constraintEnd_toStartOf="@id/valueFahrToCel"
+        app:layout_constraintBottom_toTopOf="@id/line4"
+        />
+
+    <TextView
+        android:id="@+id/valueFahrToCel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/resultFahrToCel"
+        app:layout_constraintTop_toBottomOf="@id/line3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/line4"
+        />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4"
+        />
+
+    <EditText
+        android:id="@+id/gradFahrenheit2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Fahrenheit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line4"
+        app:layout_constraintBottom_toTopOf="@id/line5"
+        app:layout_constraintEnd_toStartOf="@id/FahrToKelv"
+        />
+
+    <TextView
+        android:id="@+id/FahrToKelv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="a"
+        android:textSize="28dp"
+        app:layout_constraintStart_toEndOf="@id/gradFahrenheit2"
+        app:layout_constraintTop_toBottomOf="@id/line4"
+        app:layout_constraintEnd_toStartOf="@id/FahrKelv"
+        app:layout_constraintBottom_toBottomOf="@id/line5"
+        />
+
+    <TextView
+        android:id="@+id/FahrKelv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kelvin"
+        app:layout_constraintStart_toEndOf="@id/FahrToKelv"
+        app:layout_constraintTop_toBottomOf="@id/line4"
+        app:layout_constraintEnd_toStartOf="@id/resultFahrToKelv"
+        app:layout_constraintBottom_toTopOf="@id/line5"
+        />
+
+    <TextView
+        android:id="@+id/resultFahrToKelv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="="
+        android:textSize="28dp"
+        android:background="@color/black"
+        android:textColor="@color/white"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/line4"
+        app:layout_constraintStart_toEndOf="@id/FahrKelv"
+        app:layout_constraintEnd_toStartOf="@id/valueFahrToKelv"
+        app:layout_constraintBottom_toTopOf="@id/line5"
+        />
+
+    <TextView
+        android:id="@+id/valueFahrToKelv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/resultFahrToKelv"
+        app:layout_constraintTop_toBottomOf="@id/line4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/line5"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5"
+        />
+
+    <EditText
+        android:id="@+id/gradKelvin1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Kelvin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line5"
+        app:layout_constraintBottom_toTopOf="@id/line6"
+        app:layout_constraintEnd_toStartOf="@id/KelvToCel"
+        />
+
+    <TextView
+        android:id="@+id/KelvToCel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="a"
+        android:textSize="28dp"
+        app:layout_constraintStart_toEndOf="@id/gradKelvin1"
+        app:layout_constraintTop_toBottomOf="@id/line5"
+        app:layout_constraintEnd_toStartOf="@id/KelvCel"
+        app:layout_constraintBottom_toBottomOf="@id/line6"
+        />
+
+    <TextView
+        android:id="@+id/KelvCel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Celcius"
+        app:layout_constraintStart_toEndOf="@id/KelvToCel"
+        app:layout_constraintTop_toBottomOf="@id/line5"
+        app:layout_constraintEnd_toStartOf="@id/resultKelvCel"
+        app:layout_constraintBottom_toTopOf="@id/line6"
+        />
+
+    <TextView
+        android:id="@+id/resultKelvCel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="="
+        android:textSize="28dp"
+        android:background="@color/black"
+        android:textColor="@color/white"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/line5"
+        app:layout_constraintStart_toEndOf="@id/KelvCel"
+        app:layout_constraintEnd_toStartOf="@id/valueKelvToCel"
+        app:layout_constraintBottom_toTopOf="@id/line6"
+        />
+
+    <TextView
+        android:id="@+id/valueKelvToCel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/resultKelvCel"
+        app:layout_constraintTop_toBottomOf="@id/line5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/line6"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6"
+        />
+
+    <EditText
+        android:id="@+id/gradKelvin2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Kelvin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line6"
+        app:layout_constraintEnd_toStartOf="@id/KelvToFahr"
+        />
+
+    <TextView
+        android:id="@+id/KelvToFahr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="a"
+        android:textSize="28dp"
+        app:layout_constraintStart_toEndOf="@id/gradKelvin2"
+        app:layout_constraintTop_toBottomOf="@id/line6"
+        app:layout_constraintEnd_toStartOf="@id/KelvFahr"
+        />
+
+    <TextView
+        android:id="@+id/KelvFahr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fahrenheit"
+        app:layout_constraintStart_toEndOf="@id/KelvToCel"
+        app:layout_constraintTop_toBottomOf="@id/line6"
+        app:layout_constraintEnd_toStartOf="@id/resultKelvFahr"
+        />
+
+    <TextView
+        android:id="@+id/resultKelvFahr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="="
+        android:textSize="28dp"
+        android:background="@color/black"
+        android:textColor="@color/white"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/line6"
+        app:layout_constraintStart_toEndOf="@id/KelvFahr"
+        app:layout_constraintEnd_toStartOf="@id/valueKelvToFahr"
+        />
+
+    <TextView
+        android:id="@+id/valueKelvToFahr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/resultKelvFahr"
+        app:layout_constraintTop_toBottomOf="@id/line6"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
